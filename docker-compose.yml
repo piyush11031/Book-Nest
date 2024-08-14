@@ -3,14 +3,14 @@ services:
     container_name: postgres-sql-bn
     image: postgres
     environment:
-      POSTGRES_USER: user
+      POSTGRES_USER: username
       POSTGRES_PASSWORD: password
       PGDATA: /var/lib/postgresql/data
       POSTGRES_DB: book_nest_db
     volumes:
       - postgres:/data/postgres
     ports:
-      - 5432:5432
+      - 1234:5432
     networks:
       - spring-demo
     restart: unless-stopped
