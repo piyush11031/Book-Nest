@@ -55,8 +55,6 @@ public class AuthenticationService {
                 .build();
         userRepository.save(user);
         sendValidationEmail(user);
-
-
     }
 
     private void sendValidationEmail(User user) throws MessagingException {
@@ -111,6 +109,7 @@ public class AuthenticationService {
     }
 
     public void activateAccount(String token) throws MessagingException {
+        //token repo stores the activation code send in the email
         Token savedToken = tokenRepository.findByToken(token)
                 .orElseThrow(() -> new RuntimeException("Invalid token"));
 

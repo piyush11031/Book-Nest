@@ -1,6 +1,7 @@
 package org.network.backend.handler;
 
 import jakarta.mail.MessagingException;
+import org.network.backend.exception.OperationNotPermittedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -74,6 +75,15 @@ public class GlobalExceptionHandler {
                 status(HttpStatus.BAD_REQUEST)
                 .body(ExceptionResponse.builder()
                         .validationErrors(errors)
+                        .build());
+    }
+
+    @ExceptionHandler(OperationNotPermittedException.class)
+    public ResponseEntity<ExceptionResponse> handleException(OperationNotPermittedException exp){
+        return ResponseEntity.
+                status(HttpStatus.BAD_REQUEST)
+                .body(ExceptionResponse.builder()
+                        .error(exp.getMessage())
                         .build());
     }
 

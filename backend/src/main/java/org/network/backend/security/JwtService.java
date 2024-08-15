@@ -43,7 +43,8 @@ public class JwtService {
     }
 
     public String extractUsername(String token) {
-        return extractClaim(token, Claims::getSubject);
+        return extractClaim(token,
+                Claims::getSubject); //getSubject returns the username is jwt token
     }
 
     private <T> T extractClaim(String token, Function<Claims, T> claimResolver) {

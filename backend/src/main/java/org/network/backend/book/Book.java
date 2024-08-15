@@ -35,7 +35,7 @@ public class Book extends BaseEntity {
     private boolean sharable;
 
     @ManyToOne
-    @JoinColumn(name = "owner_id")
+    @JoinColumn(name = "owner_id") //book table will have column "owner_id" containing primary key of user
     private User owner;
 
     @OneToMany(mappedBy = "book")
@@ -43,4 +43,18 @@ public class Book extends BaseEntity {
 
     @OneToMany(mappedBy = "book")
     private List<BookTransactionHistory> histories;
+
+    @Transient
+    public double getRating(){
+        if(feedbacks == null || feedbacks.isEmpty()) return 0.0;
+
+        var rating = this.feedbacks.stream()
+                .mapToDouble(Feedback::getNote)
+                .average()
+                .orElse(0.0);
+
+        //If rating = 3.12 the return 3.0
+        double roundedRate = Math.round(rating * 10.0) / 10.0;
+        return roundedRate;
+    }
 }
