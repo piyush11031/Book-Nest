@@ -8,6 +8,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+//todo Implement refresh token. How?
+//Create a token type enum:
+//ACTIVATION (which consist of activation token used for activating the email account)
+//BEARER (jwt token for authentication)
+
 @RestController
 @RequestMapping("auth")
 @RequiredArgsConstructor

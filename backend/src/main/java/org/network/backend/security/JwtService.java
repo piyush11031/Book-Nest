@@ -44,12 +44,15 @@ public class JwtService {
 
     public String extractUsername(String token) {
         return extractClaim(token,
-                Claims::getSubject); //getSubject returns the username is jwt token
+                claims -> claims.getSubject()); //getSubject returns the username in jwt token
     }
 
     private <T> T extractClaim(String token, Function<Claims, T> claimResolver) {
 
         final Claims claims = extractAllClaims(token);
+
+        //.apply method invokes the lambda expression(supplied to .extractClaim() as argument) on "claims" field.
+        //eg. to extract username return claimResolver.apply(claims) == return claims.getSubject();
         return claimResolver.apply(claims);
     }
 
