@@ -2,12 +2,16 @@ package org.network.backend;
 
 import org.network.backend.role.Role;
 import org.network.backend.role.RoleRepository;
+import org.network.backend.user.User;
+import org.network.backend.user.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.scheduling.annotation.EnableAsync;
+
+import java.util.List;
 
 @SpringBootApplication
 @EnableJpaAuditing(auditorAwareRef = "customAuditor")
