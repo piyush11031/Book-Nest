@@ -223,8 +223,8 @@ public class BookService {
         if(book.isArchived() || !book.isSharable()){
             throw new OperationNotPermittedException("Book cannot be returned because it is Archived or not sharable");
         }
-        if(Objects.equals(book.getOwner().getId(), user.getId())){
-            throw new OperationNotPermittedException("Owner cannot return his own book");
+        if(!Objects.equals(book.getOwner().getId(), user.getId())){
+            throw new OperationNotPermittedException("You can't approve return of a book that you don't own");
         }
 
         BookTransactionHistory history = transactionHistoryRepository.findByBookIdAndOwnerId(bookId, user.getId())

@@ -42,9 +42,10 @@ public class FileStorageService {
         final String fileExtension = getFileExtension(sourceFile.getOriginalFilename());
 
         // ./uploads/users/1/23232323232.jpg
-        String targetFilePath = fileUploadSubPath + File.separator + System.currentTimeMillis() + "." +fileExtension;
+        String targetFilePath = finalUploadPath + File.separator + System.currentTimeMillis() + "." +fileExtension;
 
-        Path targetPath = Paths.get(targetFilePath);
+        Path targetPath = Paths.get(targetFilePath).toAbsolutePath();
+        targetFilePath = targetPath.toAbsolutePath().toString();
         try {
             Files.write(targetPath, sourceFile.getBytes());
             log.info("File save to " + targetFilePath);

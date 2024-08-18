@@ -1,55 +1,61 @@
 {
-  "hash": "5d7b9f08",
-  "configHash": "6fb0a4a9",
-  "lockfileHash": "e2222794",
-  "browserHash": "216eb611",
+  "hash": "75488588",
+  "configHash": "017ff7dc",
+  "lockfileHash": "31a733ca",
+  "browserHash": "92241903",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "e4d8aae1",
+      "fileHash": "4378203a",
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "80bc07d3",
+      "fileHash": "f2d73d41",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "1a7ffde1",
+      "fileHash": "2557ea05",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "d5fd0a34",
+      "fileHash": "c6c746b0",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "ef907a0b",
+      "fileHash": "a41eefbc",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "9a14b92c",
+      "fileHash": "8b8687f2",
       "needsInterop": false
     },
     "angular-code-input": {
       "src": "../../../../../node_modules/angular-code-input/fesm2022/angular-code-input.mjs",
       "file": "angular-code-input.js",
-      "fileHash": "f28e0da0",
+      "fileHash": "f727a2db",
       "needsInterop": false
     },
     "rxjs/operators": {
       "src": "../../../../../node_modules/rxjs/dist/esm5/operators/index.js",
       "file": "rxjs_operators.js",
-      "fileHash": "81c30a5a",
+      "fileHash": "f3c9d103",
+      "needsInterop": false
+    },
+    "@auth0/angular-jwt": {
+      "src": "../../../../../node_modules/@auth0/angular-jwt/fesm2020/auth0-angular-jwt.mjs",
+      "file": "@auth0_angular-jwt.js",
+      "fileHash": "6b8bb706",
       "needsInterop": false
     }
   },

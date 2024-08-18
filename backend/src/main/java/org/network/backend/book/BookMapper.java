@@ -42,7 +42,7 @@ public class BookMapper {
     public BorrowedBookResponse toBorrowedBookResponse(BookTransactionHistory bookTransactionHistory) {
 
         return BorrowedBookResponse.builder()
-                .id(bookTransactionHistory.getId())
+                .id(bookTransactionHistory.getBook().getId())
                 .title(bookTransactionHistory.getBook().getTitle())
                 .authorName(bookTransactionHistory.getBook().getAuthorName())
                 .isbn(bookTransactionHistory.getBook().getIsbn())
