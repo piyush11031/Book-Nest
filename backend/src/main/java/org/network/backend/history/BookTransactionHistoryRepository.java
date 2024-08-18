@@ -16,7 +16,7 @@ public interface BookTransactionHistoryRepository extends JpaRepository<BookTran
 """)
     Page<BookTransactionHistory> findAllBorrowedBooks(Pageable pageable, Integer userId);
 
-    //"history.book.owner.id = :userId" finds all returned books that belong to the owner
+    //"history.book.owner.id = :userId" selects those books that belong to current logged in user
     @Query("""
     SELECT history FROM BookTransactionHistory history
         WHERE history.book.owner.id = :userId

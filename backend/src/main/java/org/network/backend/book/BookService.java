@@ -50,7 +50,8 @@ public class BookService {
         User user = getUser(connectedUser);
         Book book = bookMapper.toBook(request);
         book.setOwner(user);
-        return bookRepository.save(book).getId();
+        var b = bookRepository.save(book);
+        return b.getId();
 
     }
 

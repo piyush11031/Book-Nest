@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
 import {AuthenticationService} from "../../services/services/authentication.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-activate-account',
@@ -8,7 +8,6 @@ import {AuthenticationService} from "../../services/services/authentication.serv
   styleUrl: './activate-account.component.scss'
 })
 export class ActivateAccountComponent {
-
   message:string = '';
   isOkay:boolean = true;
   submitted:boolean = false;
