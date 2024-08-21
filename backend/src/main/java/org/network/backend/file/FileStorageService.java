@@ -19,7 +19,7 @@ import java.nio.file.Paths;
 @RequiredArgsConstructor
 public class FileStorageService {
 
-    @Value("${application.file.upload.photos-output-path}")
+    @Value("${application.file.uploads.photos-output-path}")
     private String fileUploadPath;
 
     public String saveFile(@Nonnull MultipartFile file,@Nonnull Integer userId) {

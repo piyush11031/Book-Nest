@@ -10,7 +10,7 @@ services:
     volumes:
       - postgres:/data/postgres
     ports:
-      - 1234:5432
+      - 5432:5432
     networks:
       - spring-demo
     restart: unless-stopped
@@ -20,6 +20,24 @@ services:
     ports:
       - 1080:1080
       - 1025:1025
+  booknest-api:
+    container_name: booknest-api
+    image: booknest/api:1.0.1
+    ports:
+      - 8088:8088
+    networks:
+      - spring-demo
+    depends_on:
+      - postgres
+  booknest-ui:
+    container_name: booknest-ui
+    image: booknest/ui:1.0.0
+    ports:
+      - 1234:80
+    networks:
+      - spring-demo
+    depends_on:
+      - booknest-api
 networks:
   spring-demo:
     driver: bridge
