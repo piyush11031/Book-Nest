@@ -46,9 +46,12 @@ BookNest is a full-stack application that enables users to manage their book col
 - Spring Data JPA
 - JSR-303 and Spring Validation
 - OpenAPI and Swagger UI Documentation
-- Docker
-- GitHub Actions
-- Keycloak
+
+[//]: # (- Docker)
+
+[//]: # (- GitHub Actions)
+
+[//]: # (- Keycloak)
 
 [//]: # (### Frontend &#40;book-network-ui&#41;)
 
