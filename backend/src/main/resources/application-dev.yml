@@ -17,7 +17,8 @@ spring:
     host: smtp.gmail.com
     port: 465
     username: ugandaprince747@gmail.com
-    password: bqkdtfxxsfvkomhi
+    password: jeexjwnlcdenaunm
+
     properties:
       mail:
         smtp:
@@ -37,7 +38,7 @@ application:
         expiration: 604800000 # 7 days
   mailing:
     frontend:
-      activation-url: http://localhost:1234/activate-account
+      activation-url: http://localhost:4200/activate-account
   cors:
     origins: http://localhost:4200, http://localhost:1234
   file:

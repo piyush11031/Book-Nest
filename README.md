@@ -28,11 +28,13 @@ BookNest is a full-stack application that enables users to manage their book col
 #### Spring security diagram
 ![Security diagram](screenshots/security.png)
 
-#### Backend pipeline
-![Security diagram](screenshots/be-pipeline.png)
+[//]: # (#### Backend pipeline)
 
-#### Frontend pipeline
-![Security diagram](screenshots/fe-pipeline.png)
+[//]: # (![Security diagram]&#40;screenshots/be-pipeline.png&#41;)
+
+[//]: # (#### Frontend pipeline)
+
+[//]: # (![Security diagram]&#40;screenshots/fe-pipeline.png&#41;)
 
 ## Technologies Used
 
@@ -48,21 +50,28 @@ BookNest is a full-stack application that enables users to manage their book col
 - GitHub Actions
 - Keycloak
 
-### Frontend (book-network-ui)
+[//]: # (### Frontend &#40;book-network-ui&#41;)
 
-- Angular
-- Component-Based Architecture
-- Lazy Loading
-- Authentication Guard
-- OpenAPI Generator for Angular
-- Bootstrap
+[//]: # ()
+[//]: # (- Angular)
+
+[//]: # (- Component-Based Architecture)
+
+[//]: # (- Lazy Loading)
+
+[//]: # (- Authentication Guard)
+
+[//]: # (- OpenAPI Generator for Angular)
+
+[//]: # (- Bootstrap)
 
 ## Getting Started
 
 To get started with the Book Social Network project, follow the setup instructions in the respective directories:
 
 - [Backend Setup Instructions](backend/README.md)
-- [Frontend Setup Instructions](frontend/README.md)
+
+[//]: # (- [Frontend Setup Instructions]&#40;frontend/README.md&#41;)
 
 ## Acknowledgments
 
